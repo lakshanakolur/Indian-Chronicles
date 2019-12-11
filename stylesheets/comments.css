@@ -1,0 +1,26 @@
+body
+{
+	text-align: center;
+	display: inline;
+}
+.comment input[type=button]
+{
+	margin: 4px;
+	padding: 5px;
+	border: none;
+	border-radius: 20px;
+	background-color: white;
+	color: rgba(41, 18, 130, 0.66) ;
+}
+.d
+{
+	/*border-style: solid;*/
+	border-width: 2px;
+	border-color: black;
+	margin-left: 25%;
+	margin-bottom: 5px;
+	width: 50%;
+	padding: 10px;
+
+
+}

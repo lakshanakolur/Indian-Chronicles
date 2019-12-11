@@ -1,0 +1,121 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="stylesheets/about.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Work+Sans" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<div class="title">
+	<h1>Indian Chronicles</h1>
+</div>
+<!--MENU-->
+		
+		<ol id="Menu">
+  			<li><a href= "home.html">Home</a></li>
+  			<li><a href= "#">About</a></li>
+  			<li><a href= "timeline/timeline.html">Timeline</a></li>
+  			<li><a href= "popular/index.html">Popular</a></li>
+		</ol>
+
+<main>
+<!--SLIDE SHOW-->
+	<div class="slideshow-container">
+  		<div class="mySlides fade">
+    		<img src="images/buddha2.jpg" style="width:100%">
+    		<div class="text">Explore the history of India with captivating stories</div>
+  		</div>
+
+  		<div class="mySlides fade">
+    		<img src="images/dandi3.jpg" style="width:100%">
+    		<div class="text">Play around with our highly customised timeline</div>
+  		</div>
+
+  		<div class="mySlides fade">
+    		<img src="images/mughal3.jpg" style="width:100%">
+    		<div class="text">Read related stories after you are done.</div>
+  		</div>
+
+  		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+<br>
+
+	<header>
+		<h1>About</h1>
+	</header>
+
+
+
+	<div class="about">
+		<p>Greetings and other pleasantries! This is the about page of our website.<br>
+        Our website chronicles Indian history in interesting ways. We have categorized it in terms of popularity of posts, according to the timeline of Indian History and recent posts.
+        <br>
+        Interesting Features:
+        <br>
+        A login page appears when you first load our page. If you provide the right username and password it directs you to the home page. If you are a new user then you can sign up as well. Our carefully curated homepage provides easy access to all recent posts and the websites social media. The homepage has a very interesting header which is a playback video with the title “Indian Chronicles” in the foreground and a main menu under it which helps the user to navigate through the website with ease. The page has a floating menu which welcomes you after you log in and lets you comment on what you feel about the website. It also has a sign up page in case you are a new user.
+        <br>
+        The about page provides details on what the website is about and who designed it.
+        <br>
+        Our timeline page provides a horizontal timeline of events that happened in India right from the Mughals to the freedom struggle. The event expands when you click on it and provides you with a read more button which in turn directs you to a new page which contains an extensive report on that event.
+        <br>
+        The popular tab provides all the posts that are popular in a very convenient way so you can read everything one by one without having to click on multiple links. It has left and right arrows which navigates you to different posts.
+        <br>
+        Each page itself has a like button which will record if you have liked a post and you can share it using the social media icons at the bottom of the page. "
+		</p>
+	</div>
+	<div class="aboutus" style ="margin-left:20%">
+				
+				
+                <img id="dw" src="images/dweepa.jpg"
+                onclick="function(){alert("hi")}" />
+                
+
+                <img id="ish" src="images/ishita.jpg"
+                alt="ishita" title="Ishita Bhandari" />
+
+
+                <img id ="lak" src="images/laksh2.jpg"
+                alt="lakshana" title="Lakshana Kolur" />
+                
+                <img id="kus" src="images/kusum.jpg"
+                alt="kusum" title="Kusumanjali Ramesh" />
+
+
+    </div>
+            <div class="about1">
+                <center>
+                <p> Click on a person to know their contribution</p>
+                </center>
+            </div>
+</main>
+<!--FOOTER-->
+<footer>
+	<a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<a href="#" class="fa fa-youtube"></a>
+	<a href="#" class="fa fa-instagram"></a>
+</footer>
+<script>
+   var dw= document.querySelector("#dw");
+   var ish= document.querySelector("#ish");
+   var lak= document.querySelector("#lak");
+   var kus= document.querySelector("#kus");
+   var ab= document.querySelector(".about1")
+   
+   dw.addEventListener("click",function(){ab.innerHTML="This is Dweepa! She made the homepage, the about page and some of the content pages. She used a basic html structure and tons of CSS and a little javascript  to give life to the homepage that came to be. The homepage has a very interesting header (the playback video with the title Indian Chronicles in the foreground), a main menu under it which helps the user to navigate through the website with ease and also a floating comments section where you can tell us how much you love our website (wink, wink). She also created a search/suggesion menu which suggests more posts according to the users interests, which is one of the many feaures of our website."; },false);
+   
+   ish.addEventListener("click",function(){ab.innerHTML="This is Ishita, the brains behind our backend (pun intended). Our main objective was to touch all the portions of the WT course we have learned so far. So to implement PHP and mysql operations, Ishita made signup and login pages for our website. When you click on signup/login it leads you to the page where details are either matched or entered in the database and accordingly redirection takes place. Once you have succesfully logged in, you see the fully functional comment box which lets you share your opinion, which works on Java script. All of this made our site even more interesting and interactive.";},false);
+  
+  lak.addEventListener("click",function(){ab.innerHTML="This is Lakshana! She is responsible for making one of the major features of our website- The timeline. Our timeline page provides a horizontal timeline of events that occured in India. We can course through the timeline and  choose which event we want based on the image reflected behind each event.The event expands when you click on it and provides you with a 'read more' button which in turn directs you to a new page which contains an extensive report on that event.";},false);
+    
+    kus.addEventListener("click",function(){ab.innerHTML="This is Kusum. She goes by the motto: No body likes a dull site. To make our site even more interesting and visually delightful, Kusum made a popular page that contains all the top searches. They are presented beautifully with an interactive interface. If you click on any picture, it'll open another page which contains a detailed description of that event. You can also scroll through different pages without going back to the main page again and agian using the go left and the go right buttons that are present on every page.";},false);
+    </script>
+
+<script src="js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class=''>
+      <head>
+          <title>Timeline</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        
+      <link rel="stylesheet" href="../stylesheets/subpage.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Overall theme-->
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Work+Sans" rel="stylesheet">
+
+        <style >
+          
+         @import compass
+
+          /* -------------------------------------
+          * For horizontal version, set the
+          * $vertical variable to false
+          * ------------------------------------- */
+         $vertical : false;
+
+          /* -------------------------------------
+          * General Style
+          * ------------------------------------- */
+
+          /*// Colours
+          $bg: #48b379
+          $white: #eee9dc
+          $red: #f98262*/
+
+
+        /* @import url(https://fonts.googleapis.com/css?family=Noto+Sans); */
+
+        body {
+          margin: 0;
+          padding: 0 5%;
+          font-size: 100%;
+          font-family: "Noto Sans", sans-serif;
+          color: #c76766;
+          background:white;
+        }
+        
+        h2 {
+          margin: 1em 0 0 0;
+          font-size: 3em;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-top:30px;
+          margin-left:15%;
+          padding-top:150px;
+          
+        }
+        
+        .menu {
+          text-align: center;
+          margin: auto;
+          margin-left:27%;
+          padding-bottom:60px;
+          position:fixed;
+        }
+
+
+        /* -------------------------------------
+         * timeline
+         * ------------------------------------- */
+        #timeline {
+          list-style: none;
+          margin: 120px 0 0;
+          padding: 0;
+          border-top: 8px solid #ccdfcb;
+          display: table;
+          border-spacing: 30px 0;
+        }
+        #timeline li {
+          display: table-cell;
+        }
+        #timeline li .relative {
+          position: relative;
+        }
+        #timeline p {
+          margin: 0 0 15px;
+        }
+        
+        .date {
+          text-align: center;
+          top: -55px;
+          left: 0;
+          right: 0;
+          font-size: 0.95em;
+          line-height: 20px;
+          position: absolute;
+        }
+        
+        .circle {
+          margin: 0 auto;
+          top: -14px;
+          left: 0;
+          right: 0;
+          width: 10px;
+          height: 10px;
+          background: #c76766;
+          border: 5px solid #ccdfcb;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+        }
+        
+        .content {
+          width: 200px;
+          max-height: 0;
+          margin-top: 40px;
+          vertical-align: top;
+          padding: 50px 15px 15px;
+          transition: width 0.4s linear, max-height 0.4s linear;
+          border-width: 2px;
+          border-style: solid;
+          border-radius: 0.5em;
+          position: relative;
+         
+        }
+        .content:before, .content:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border: solid transparent;
+          position: absolute;
+          pointer-events: none;
+          bottom: 100%;
+        }
+        .content:before {
+          border-bottom-color: inherit;
+          border-width: 15px;
+          left: 50%;
+          margin-left: -15px;
+        }
+        .content:after {
+          border-bottom-color: #c76766;
+          border-width: 12px;
+          left: 50%;
+          margin-left: -12px;
+
+        }
+        .content p {
+          max-height: 0;
+          color: transparent;
+          text-align: justify;
+          word-break: break-word;
+          hyphens: auto;
+          overflow: hidden;
+        }
+        
+        label {
+          font-size: 1em;
+          position: absolute;
+          z-index: 100;
+          cursor: pointer;
+          width: 200px;
+          white-space: pre;
+          word-break: break-all;
+          
+          text-overflow: clip;
+          overflow: visible;
+          display: block;
+          top: 60px;
+          left: 15px;
+        }
+  
+        .radio {
+          display: none;
+        }
+        
+        .radio:checked + .relative label {
+          cursor: auto;
+          width: 400px
+          transition: width 0.3s linear 0.2s;
+        }
+        .radio:checked + .relative .circle {
+          background: #c76766;
+        }
+        .radio:checked ~ .content {
+          max-height: 180px;
+          border-color: #c76766;
+          width: 400px;
+        }
+        .radio:checked ~ .content p {
+          max-height: 200px;
+          color: #c76766;
+          transition: color 0.3s linear 0.3s;
+        }
+        
+        #part1 {
+          background-image: url(../images/indian-rebellion.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          
+          font-weight: 5em;
+        }
+
+        
+        #part2 {
+          background-image: url(../images/eic.jpg);
+          
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          font-weight: 5em;
+         
+          
+        }
+        #part3 {
+          background-image: url(../images/inc.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+         
+        }
+        #part4 {
+          background-image: url(../images/jall2.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+         
+        }
+        #part5 {
+          background-image: url(../images/ncm.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+         
+        }
+        #part6 {
+          background-image: url(../images/Simon.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size: 100%;
+
+        }
+        #part7 {
+          background-image: url(../images/gandhi2.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          
+        }
+        #part8 {
+          background-image: url(../images/Crowd.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          
+        }
+
+        #part9 {
+          background-image: url(../images/recent2.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          
+        }
+
+        #part10 {
+          background-image: url(../images/recent3.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          
+        }
+
+        #part11 {
+          background-image: url(../images/dandi.jpg);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          background-size:100% 100%;
+          
+        }
+
+        
+        </style>
+        
+        <link rel="stylesheet" type="text/css" href="stylesheets/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+        </head>
+      <body>
+          <div class="menu">
+              <ol id="Menu">
+                  <li><a href= "../home.html">Home</a></li>
+                  <li><a href= "../about.html">About</a></li>
+                  <li><a href= "timeline.html">Timeline</a></li>
+                  <li><a href= "../popular/index.html">Popular</a></li>
+              </ol>
+              </div>
+
+<h2> Timeline For Indian Chronicles</h2>
+<!--<p>Please set the $vertical variable to false to see the horizontal version.</p>-->
+<ul id='timeline'>
+
+    <li class='work'>
+        <input class='radio' id='work9' name='works' type='radio'>
+        <div class="relative">
+          <label for='work9'><b>Buddhism</b></label>
+          <span class='date'>460 B.C.</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content' id='part9'>
+          <p>
+            <a href="../pages/buddha.php">Read more</a>
+          </p>
+        </div>
+      </li>
+
+      <li class='work'>
+          <input class='radio' id='work10' name='works' type='radio'>
+          <div class="relative">
+            <label for='work10'><b>Mughal Era</b></label>
+            <span class='date'>1526-1707</span>
+            <span class='circle'></span>
+          </div>
+          <div class='content' id='part10'>
+            <p>
+              <a href="../pages/mughal.php">Read more</a>
+            </p>
+          </div>
+        </li>
+
+        <li class='work'>
+            <input class='radio' id='work11' name='works' type='radio'>
+            <div class="relative">
+              <label for='work11'><b>Dandi March</b></label>
+              <span class='date'>March-April 1930</span>
+              <span class='circle'></span>
+            </div>
+            <div class='content' id='part11'>
+              <p>
+                <a href="../pages/dandimarch.php">Read more</a>
+              </p>
+            </div>
+          </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work5' name='works' type='radio' checked>
+    <div class="relative">
+      <label for='work5'><b><b>Intro in 1857</b></b></label>
+      <span class='date'>10 May 1857</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part1'>
+      <p>
+        <a href="laksh1.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work4' name='works' type='radio'>
+    <div class="relative">
+      <label for='work4'><b>End of EIC</b></label>
+      <span class='date'>1 November 1858</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part2'>
+      <p>
+        <a href="laksh2.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work3' name='works' type='radio'>
+    <div class="relative">
+      <label for='work3'><b>INC</b></label>
+      <span class='date'>28 December 1885</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part3'>
+      <p>
+        <a href="laksh3.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work2' name='works' type='radio'>
+    <div class="relative">
+      <label for='work2'><b>Jallianwala</b></label>
+      <span class='date'>13 April 1919</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part4'>
+      <p>
+        <a href="laksh4.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work1' name='works' type='radio'>
+    <div class="relative">
+      <label for='work1'><b>The Non-Cooperation 
+       Movement </b></label>
+      <span class='date'>10 March 1922</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part5'>
+      <p>
+        <br>
+        <a href="laksh5.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work6' name='works' type='radio'>
+    <div class="relative">
+      <label for='work6'><b>Simon Commission</b></label>
+      <span class='date'>November 1927</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part6'>
+      <p>
+        <a href="laksh6.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work7' name='works' type='radio'>
+    <div class="relative">
+      <label for='work7'><b>Civil Disobedience     
+      Movement</b></label>
+      <span class='date'>12 March 1930</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part7'>
+      <p>
+        <br>
+        <a href="laksh7.html">Read more</a>
+      </p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work8' name='works' type='radio'>
+    <div class="relative">
+      <label for='work8'><b>Quit India Movement</b></label>
+      <span class='date'>8 August 1942</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content' id='part8'>
+      <p>
+        <br>
+        <a href="laksh8.html">Read more</a>
+      </p>
+    </div>
+  </li>
+</ul>
+</html>
