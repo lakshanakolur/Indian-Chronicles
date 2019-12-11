@@ -39,18 +39,17 @@ The popular tab provides all the posts that are popular in a very convenient way
 
 ### Future Enhancement
 
-1.
-Expanding the user interaction to Multi-user platform wherein users will be able to view what other people have commented and can share their opinion too.
-2.
-A more refined suggestions/search tool that will suggest all possible related websites in real time.
-3.
-Using the database created when a user signs up and using that to further website’s reach by sending a monthly newsletter to the emails.
-4.
-Making the website compatible with all browsers and screen widths.
-5.
-Incorporating jquery and bootsrap for cleaner design and versatile functionality.
-6.
-Content wise, Expanding the horizon beyond india, to world history.
+1. Expanding the user interaction to Multi-user platform wherein users will be able to view what other people have commented and can share their opinion too.
+
+2. A more refined suggestions/search tool that will suggest all possible related websites in real time.
+
+3. Using the database created when a user signs up and using that to further website’s reach by sending a monthly newsletter to the emails.
+
+4. Making the website compatible with all browsers and screen widths.
+
+5. Incorporating jquery and bootsrap for cleaner design and versatile functionality.
+
+6. Content wise, Expanding the horizon beyond india, to world history.
 
 
 
